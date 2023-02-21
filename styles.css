@@ -9,9 +9,28 @@ This means the default styles are for the smallest mobile size.
 /* Multi-line rulesets must use whitespace for indentation consistently. */
 body {
 	/* note the indentation here */
-	background-color: #5bf;
+	background-color: white;
 	color: #024;
+	align-content: center;
 }
+
+nav {
+	display: flex;
+    flex-direction: row;
+    width: 15vw;
+}
+
+nav a {
+	padding: 15%;
+    padding: auto;
+    margin: auto;
+    text-decoration: double;
+    transition: background-color 0.8s;
+}
+
+nav a:hover {
+	background-color: red;
+  }
 
 /* One-liners are fine for very simple rulesets. */
 h1 { font-family: sans-serif;}

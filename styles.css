@@ -7,6 +7,7 @@ This means the default styles are for the smallest mobile size.
 */
 
 /* Multi-line rulesets must use whitespace for indentation consistently. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 
 
@@ -34,8 +35,8 @@ header {
 }
 .logo {
 	font-size: 26px;
-	font-weight: bold;
 	color: #fefefe;
+	cursor: pointer;
 }
 .paddy {
 	display: none;
@@ -94,7 +95,7 @@ header {
 		overflow: hidden;
 	}
 	.nav-bar.active {
-		height: 450px;
+		height: 315px;
 	}
 	.nav-bar ul {
 		display: block;
@@ -112,6 +113,30 @@ header {
 	}
 }
 
+h1 {
+	text-align: center;
+	font-size: 30px;
+	padding-top: 20px;
+}
+
+p {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #11101b;
+	color: white;
+	text-align: center;
+	font-size: 10px;
+}
+.footer p {
+	padding: 0.5px;
+}
 /* One-liners are fine for very simple rulesets. */
 
 /* 

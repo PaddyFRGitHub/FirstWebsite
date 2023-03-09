@@ -9,3 +9,10 @@
 // We like to see what you can do. Be creative.
 
 console.log("Obviously, you should replace this with some event handlers.")
+
+
+paddy = document.querySelector(".paddy");
+			paddy.onclick = function() {
+				navBar = document.querySelector(".nav-bar");
+				navBar.classList.toggle("active");
+			}

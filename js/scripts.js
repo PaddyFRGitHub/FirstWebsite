@@ -1,3 +1,4 @@
+<sript src="https://smtpjs.com/v3/smtp.js"></sript>
 // We want to see some non-trivial Javascript code
 // At a minimum, you should demonstrate a few simple uses of event-driven JavaScript for DOM manipulation
 // You should use ES6 syntax throughout: e.g. don't use "var", use the modern tools (template literals, arrow functions).
@@ -16,3 +17,18 @@ paddy = document.querySelector(".paddy");
 				navBar = document.querySelector(".nav-bar");
 				navBar.classList.toggle("active");
 			}
+
+			
+function sendEmail(){
+	Email.send({
+		Host : "smtp.gmail.com",
+		Username : "ruddenpatrick@gmail.com",
+		Password : "password",
+		To : 'ruddenpatrick@gmail.com',
+		From : document.getElementById("email").value,
+		Subject : "Portfolio Contact Form Enquiry",
+		Body : "And this is the body"
+	}).then(
+	  message => alert(message)
+	);
+}			

@@ -36,11 +36,29 @@
 		</header>
 
 		<h1>Contact Me</h1>
+		<h2>Social Media</h2>
 		<div>
 			<div class="soc">
 			<a href="https://www.facebook.com/patrick.rudden.90/" target="_blank" class="fa fa-facebook"></a>
 			<a href="https://www.linkedin.com/in/patrick-rudden-ab1184257/" target="_blank" class="fa fa-linkedin"></a>
+			<a href="https://twitter.com/Parudden" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://github.com/PaddyFRGitHub" target="_blank" class="fa fa-github"></a>
+			<a href="https://www.instagram.com/patrick_rudden/" target="blank" class="fa fa-instagram"></a>
 			</div>
+		</div>
+		
+		<div class="container">
+			<form id="contact" onsubmit="sendEmail(); reset(); return false;">
+				<h3>Contact Form</h3>
+				<input type="text" id="name" placeholder="Full Name" required>
+				<input type="email" id="email" placeholder="E-Mail" required>
+				<textarea id="message" rows="4" placeholder="Message"></textarea>
+				<button type="submit">Send</button>
+			</form>
+		</div>
+
+		<div class="footer">
+			<p>Footer</p>
 		</div>
 
 		<script src="js/scripts.js"></script>

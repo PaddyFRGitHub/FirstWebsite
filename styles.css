@@ -23,6 +23,9 @@ body {
 body:not(.index) {
 	background-color: white;
 }
+body.index .logo {
+	display: none;
+  }
 header {
 	width: 100%;
 	height: 80px;
@@ -38,6 +41,11 @@ header {
 	cursor: pointer;
 	width: 10%;
 }
+body #index .nav-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
 .paddy {
 	display: none;
 }
@@ -60,6 +68,15 @@ header {
 .nav-bar ul li a.active {
 	color: #11101b;
 	background: #fefefe;
+}
+.index-nav {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.index-nav li {
+	margin: auto 85px;
 }
 
 @media only screen and (max-width: 1320px) {
@@ -266,9 +283,9 @@ div .photo .container2 {
 	}
   }
   #centrallogo {
-	opacity: 0.5;
-	animation: fadeInOut 5s ease-in-out;
-	animation-fill-mode: forwards;
+	opacity: 0;
+	animation: fadeInOut 5s ease-in-out infinite;
+	/*animation-fill-mode: forwards; */
 	width: 70%;
 	margin: auto;
   }
@@ -281,7 +298,7 @@ div .photo .container2 {
 	  opacity: 1;
 	}
 	100% {
-	  opacity: 0.04;
+	  opacity: 0;
 	}
   }
 

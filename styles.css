@@ -9,10 +9,6 @@ This means the default styles are for the smallest mobile size.
 /* Multi-line rulesets must use whitespace for indentation consistently. */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-
-
-
-
 * {
 	margin: 0;
 	padding: 0;
@@ -22,7 +18,10 @@ This means the default styles are for the smallest mobile size.
 	box-sizing: border-box;
 }
 body {
-	background: white;
+	background: #11101b;
+}
+body:not(.index) {
+	background-color: white;
 }
 header {
 	width: 100%;
@@ -266,6 +265,26 @@ div .photo .container2 {
 	  transform: scale(1);
 	}
   }
+  #centrallogo {
+	opacity: 0.5;
+	animation: fadeInOut 5s ease-in-out;
+	animation-fill-mode: forwards;
+	width: 70%;
+	margin: auto;
+  }
+  
+  @keyframes fadeInOut {
+	0% {
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0.04;
+	}
+  }
+
 /* One-liners are fine for very simple rulesets. */
 
 /* 

@@ -33,3 +33,18 @@ function sendEmail(){
 	  message => alert(message)
 	);
 }			
+
+const logo = document.getElementById('centrallogo');
+let opacity = 0;
+let direction = 1;
+
+function fadeInOut() {
+  logo.style.opacity = opacity;
+  if (opacity < 0.1 || opacity > 0.9) {
+    direction *= -1;
+  }
+  opacity += direction * 0.1;
+  requestAnimationFrame(fadeInOut);
+}
+
+fadeInOut();

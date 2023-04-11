@@ -12,7 +12,7 @@
 	<body>
 		<header>
 			<div class ="logo"> 
-				<img src="Images/logo2.png" id="logo2">
+				<img src="Images/logo2.png" id="logo2" alt="Logo">
 			</div>
 			<div class="paddy">
 				<div class="line"></div>
@@ -41,21 +41,21 @@
 		<h2>Social Media</h2>
 		<div>
 			<div class="soc">
-			<a href="https://www.facebook.com/patrick.rudden.90/" target="_blank" class="fa fa-facebook"></a>
-			<a href="https://www.linkedin.com/in/patrick-rudden-ab1184257/" target="_blank" class="fa fa-linkedin"></a>
-			<a href="https://twitter.com/Parudden" target="_blank" class="fa fa-twitter"></a>
-			<a href="https://github.com/PaddyFRGitHub" target="_blank" class="fa fa-github"></a>
-			<a href="https://www.instagram.com/patrick_rudden/" target="blank" class="fa fa-instagram"></a>
+			<a href="https://www.facebook.com/patrick.rudden.90/" target="_blank" class="fa fa-facebook" alt="Facebook"></a>
+			<a href="https://www.linkedin.com/in/patrick-rudden-ab1184257/" target="_blank" class="fa fa-linkedin" alt="LinkedIn"></a>
+			<a href="https://twitter.com/Parudden" target="_blank" class="fa fa-twitter" alt="Twitter"></a>
+			<a href="https://github.com/PaddyFRGitHub" target="_blank" class="fa fa-github" alt="GitHub"></a>
+			<a href="https://www.instagram.com/patrick_rudden/" target="blank" class="fa fa-instagram" alt="Instagram"></a>
 			</div>
 		</div>
 		
 		<div class="container">
-			<form id="contact" onsubmit="sendEmail(); reset(); return false;">
+			<form class="contact">
 				<h3>Contact Form</h3>
-				<input type="text" id="name" placeholder="Full Name" required>
-				<input type="email" id="email" placeholder="E-Mail" required>
-				<textarea id="message" rows="4" placeholder="Message"></textarea>
-				<button type="submit">Send</button>
+				<input type="text" name="name" placeholder="Full Name" required>
+				<input type="email" name="email" placeholder="E-Mail" required>
+				<textarea name="message" rows="4" placeholder="Message"></textarea>
+				<button type="submit" name="submit">Send</button>
 			</form>
 		</div>
 
@@ -64,5 +64,6 @@
 		</div>
 
 		<script src="js/scripts.js"></script>
+		<script src="js/form.js"></script>
 	</body>
 </html>

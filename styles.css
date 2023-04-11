@@ -41,11 +41,7 @@ header {
 	cursor: pointer;
 	width: 10%;
 }
-body #index .nav-bar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
+
 .paddy {
 	display: none;
 }
@@ -69,24 +65,30 @@ body #index .nav-bar {
 	color: #11101b;
 	background: #fefefe;
 }
-.index-nav {
-	display: flex;
-	justify-content: center;
-	text-align: center;
+nav.nav-bar {
+	margin: auto;
 }
-
-.index-nav li {
-	margin: auto 85px;
+nav.nav-bar li {
+	padding-left: 100px;
+	padding-right: 100px;
 }
 
 @media only screen and (max-width: 1320px) {
 	header {
-		padding: 0 50px;
+		padding: 0px 50px;
+	}
+	nav.nav-bar li {
+		padding-left: 70px;
+		padding-right: 70px;
 	}
 }
-@media only screen and (max-width: 1100) {
+@media only screen and (max-width: 1100px) {
 	header {
-		padding: 0 30px;
+		padding: 0px 30px;
+	}
+	nav.nav-bar li {
+		padding-left: 45px;
+		padding-right: 45px;
 	}
 }
 @media only screen and (max-width: 750px) {
@@ -286,8 +288,9 @@ div .photo .container2 {
 	opacity: 0;
 	animation: fadeInOut 5s ease-in-out infinite;
 	/*animation-fill-mode: forwards; */
-	width: 70%;
+	width: 75%;
 	margin: auto;
+	padding: 15px;
   }
   
   @keyframes fadeInOut {
@@ -301,6 +304,16 @@ div .photo .container2 {
 	  opacity: 0;
 	}
   }
+
+div#ghapi {
+	width: 40%;
+	margin: auto;
+	padding: 35px 10px 75px 10px;
+}
+h3#workh3 {
+	text-align: center;
+	font-size: medium;
+}
 
 /* One-liners are fine for very simple rulesets. */
 

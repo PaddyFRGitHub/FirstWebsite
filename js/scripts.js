@@ -1,4 +1,5 @@
 src="https://smtpjs.com/v3/smtp.js"
+
 // We want to see some non-trivial Javascript code
 // At a minimum, you should demonstrate a few simple uses of event-driven JavaScript for DOM manipulation
 // You should use ES6 syntax throughout: e.g. don't use "var", use the modern tools (template literals, arrow functions).
@@ -17,29 +18,13 @@ paddy = document.querySelector(".paddy");
 				navBar = document.querySelector(".nav-bar");
 				navBar.classList.toggle("active");
 				console.log("Menu bar clicked")
-			}
-
-			
-function sendEmail(){
-	Email.send({
-		Host : "smtp.gmail.com",
-		Username : "ruddenpatrick@gmail.com",
-		Password : "password",
-		To : 'ruddenpatrick@gmail.com',
-		From : document.getElementById("email").value,
-		Subject : "Portfolio Contact Form Enquiry",
-		Body : "And this is the body"
-	}).then(
-	  message => alert(message)
-	);
-}			
+			}		
 
 const logo = document.getElementById('centrallogo');
 let opacity = 0;
 let direction = 1;
 
 function fadeInOut() {
-  logo.style.opacity = opacity;
   if (opacity < 0.1 || opacity > 0.9) {
     direction *= -1;
   }
@@ -48,3 +33,24 @@ function fadeInOut() {
 }
 
 fadeInOut();
+
+const form1 = document.querySelector('.contact');
+
+form1.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const formData = new FormData(form1);
+  const data = Object.fromEntries(formData);
+  
+  fetch('https://reqres.in/api/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  }).then(res => res.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error))
+  
+});
+

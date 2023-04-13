@@ -159,7 +159,7 @@ p {
 h2 {
 	text-align: center;
 	padding: 25px;
-	font-size: medium;
+	font-size: 40px;
 }
 .fa {
 	padding: 20px;
@@ -284,7 +284,7 @@ div .photo .container2 {
 	  transform: scale(1);
 	}
   }
-  #centrallogo {
+#centrallogo {
 	opacity: 0;
 	animation: fadeInOut 5s ease-in-out infinite;
 	/*animation-fill-mode: forwards; */
@@ -292,8 +292,7 @@ div .photo .container2 {
 	margin: auto;
 	padding: 15px;
   }
-  
-  @keyframes fadeInOut {
+@keyframes fadeInOut {
 	0% {
 	  opacity: 0;
 	}
@@ -303,16 +302,42 @@ div .photo .container2 {
 	100% {
 	  opacity: 0;
 	}
-  }
-
-div#ghapi {
-	width: 40%;
-	margin: auto;
-	padding: 35px 10px 75px 10px;
+}
+#ghapi {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#ghapi img {
+	width: 175px;
+	height: 175px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+#ghapi ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#ghapi li {
+	margin-bottom: 5px;
+	text-align: center;
+	padding: auto;
+}
+#ghapi a {
+	text-decoration: none;
+	color: #0366d6;
+	padding: 35px;
+}
+#ghapi a:hover {
+	text-decoration: underline;
+	color: red;
+	cursor: pointer;
 }
 h3#workh3 {
 	text-align: center;
-	font-size: medium;
+	padding: 40px;
+	font-size: 40px;
 }
 
 /* One-liners are fine for very simple rulesets. */

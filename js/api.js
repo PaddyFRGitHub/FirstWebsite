@@ -16,7 +16,9 @@ async function getUser(username) {
 
 async function gitStuff() {
     const user = await getUser('PaddyFRGitHub');
+    console.log(user)
     const repos = await getJSON(user.repos_url);
+    console.log(repos)
     const ghapi = document.getElementById('ghapi');
     const a = avatar(user);
     ghapi.appendChild(a);
@@ -31,6 +33,7 @@ async function gitStuff() {
         repoListItem.appendChild(repoLink);
 
         const languages = await getJSON(repo.languages_url);
+        console.log(languages)
 
         const primaryLanguage = repo.language;
 

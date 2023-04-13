@@ -132,7 +132,9 @@ nav.nav-bar li {
 	}
 
 	.nav-bar.active {
-		height: 315px;
+		height: 375px;
+		background: #11101b;
+		z-index: 999;
 	}
 
 	.nav-bar ul {
@@ -146,6 +148,7 @@ nav.nav-bar li {
 
 	.nav-bar.active ul {
 		opacity: 1;
+		background: #11101b;
 	}
 
 	.nav-bar ul li a {
@@ -335,10 +338,11 @@ div .photo .container2 {
 #centrallogo {
 	opacity: 0;
 	animation: fadeInOut 5s ease-in-out infinite;
-	/*animation-fill-mode: forwards; */
 	width: 75%;
 	margin: auto;
 	padding: 15px;
+	z-index: 1;
+	pointer-events: none; 
 }
 
 @keyframes fadeInOut {

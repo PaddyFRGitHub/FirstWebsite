@@ -3,44 +3,53 @@ function avatar(user) {
     avatar.alt = `%{user.login}'s avatar`;
     avatar.src = user.avatar_url;
     return avatar;
-  }
+}
 
-  async function getJSON(url) {
+async function getJSON(url) {
     const response = await fetch(url);
     return response.json()
-  }
+}
 
-  async function getUser(username) {
+async function getUser(username) {
     return getJSON(`https://api.github.com/users/${username}`);
-  }
+}
 
-  async function gitStuff() {
+async function gitStuff() {
     const user = await getUser('PaddyFRGitHub');
-    console.log(user);
     const repos = await getJSON(user.repos_url);
-    console.log(repos);
-
-    // Retrieve the container element from the HTML document
     const ghapi = document.getElementById('ghapi');
-
-    // Create and append the user's avatar to the container element
     const a = avatar(user);
     ghapi.appendChild(a);
 
-    // Create a list of the user's repositories
     const repoList = document.createElement('ul');
-    repos.forEach(repo => {
-      const repoLink = document.createElement('a');
-      repoLink.href = repo.html_url;
-      repoLink.textContent = repo.name;
+    repos.forEach(async (repo) => {
+        const repoLink = document.createElement('a');
+        repoLink.href = repo.html_url;
+        repoLink.textContent = repo.name;
 
-      const repoListItem = document.createElement('li');
-      repoListItem.appendChild(repoLink);
-      repoList.appendChild(repoListItem);
+        const repoListItem = document.createElement('li');
+        repoListItem.appendChild(repoLink);
+
+        const languages = await getJSON(repo.languages_url);
+
+        const primaryLanguage = repo.language;
+
+        const languageList = document.createElement('ul');
+        Object.keys(languages).forEach((language) => {
+            const languageListItem = document.createElement('li');
+            languageListItem.textContent = `${language}: ${languages[language]} bytes`;
+            languageList.appendChild(languageListItem);
+        });
+
+        if (primaryLanguage) {
+            repoListItem.appendChild(document.createTextNode(` (${primaryLanguage}) `));
+        }
+        repoListItem.appendChild(languageList);
+
+        repoList.appendChild(repoListItem);
     });
 
-    // Append the list of repositories to the container element
     ghapi.appendChild(repoList);
-  }
+}
 
-  gitStuff();
+gitStuff();

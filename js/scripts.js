@@ -1,4 +1,4 @@
-src="https://smtpjs.com/v3/smtp.js"
+src = "https://smtpjs.com/v3/smtp.js"
 
 // We want to see some non-trivial Javascript code
 // At a minimum, you should demonstrate a few simple uses of event-driven JavaScript for DOM manipulation
@@ -14,11 +14,11 @@ console.log("Obviously, you should replace this with some event handlers.")
 
 
 paddy = document.querySelector(".paddy");
-			paddy.onclick = function() {
-				navBar = document.querySelector(".nav-bar");
-				navBar.classList.toggle("active");
-				console.log("Menu bar clicked")
-			}		
+paddy.onclick = function () {
+  navBar = document.querySelector(".nav-bar");
+  navBar.classList.toggle("active");
+  console.log("Menu bar clicked")
+}
 
 const logo = document.getElementById('centrallogo');
 let opacity = 0;

@@ -5,7 +5,7 @@ form1.addEventListener('submit', event => {
 
   const formData = new FormData(form1);
   const data = Object.fromEntries(formData);
-  
+
   fetch('https://reqres.in/api/users', {
     method: 'POST',
     headers: {
@@ -13,7 +13,7 @@ form1.addEventListener('submit', event => {
     },
     body: JSON.stringify(data)
   }).then(res => res.json())
-  .then(data => console.log(data))
-  .catch(error => console.log(error))
-  
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
+
 });

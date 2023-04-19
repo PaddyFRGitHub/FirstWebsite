@@ -22,37 +22,31 @@ async function gitStuff() {
     const ghapi = document.getElementById('ghapi');
     const a = avatar(user);
     ghapi.appendChild(a);
-
-    const repoList = document.createElement('ul');
+  
+    const dropdownContent = document.querySelector('.dropdown-content');
     repos.forEach(async (repo) => {
-        const repoLink = document.createElement('a');
-        repoLink.href = repo.html_url;
-        repoLink.textContent = repo.name;
-
-        const repoListItem = document.createElement('li');
-        repoListItem.appendChild(repoLink);
-
-        const languages = await getJSON(repo.languages_url);
-        console.log(languages)
-
-        const primaryLanguage = repo.language;
-
-        const languageList = document.createElement('ul');
-        Object.keys(languages).forEach((language) => {
-            const languageListItem = document.createElement('li');
-            languageListItem.textContent = `${language}: ${languages[language]} bytes`;
-            languageList.appendChild(languageListItem);
-        });
-
-        if (primaryLanguage) {
-            repoListItem.appendChild(document.createTextNode(` (${primaryLanguage}) `));
-        }
-        repoListItem.appendChild(languageList);
-
-        repoList.appendChild(repoListItem);
+      const repoLink = document.createElement('a');
+      repoLink.href = repo.html_url;
+      repoLink.textContent = repo.name;
+      dropdownContent.appendChild(repoLink);
+  
+      const languages = await getJSON(repo.languages_url);
+      console.log(languages)
+  
+      const primaryLanguage = repo.language;
+  
+      const languageList = document.createElement('ul');
+      Object.keys(languages).forEach((language) => {
+        const languageListItem = document.createElement('li');
+        languageListItem.textContent = `${language}: ${languages[language]} bytes`;
+        languageList.appendChild(languageListItem);
+      });
+  
+      if (primaryLanguage) {
+        repoLink.appendChild(document.createTextNode(` (${primaryLanguage}) `));
+      }
+      repoLink.appendChild(languageList);
     });
-
-    ghapi.appendChild(repoList);
-}
-
-gitStuff();
+  }
+  
+  gitStuff();

@@ -248,6 +248,25 @@ h2 {
 	padding: 15px;
 }
 
+iframe {
+	width: 560px;
+	height: 315px;	
+}
+
+@media only screen and (max-width: 570px) {
+	iframe {
+		width: 373px;
+		height: 210px;
+	}
+}
+
+@media only screen and (max-width: 385px) {
+	iframe {
+		width: 280px;
+		height: 158px;
+	}
+}
+
 form {
 	display: flex;
 	flex-direction: column;

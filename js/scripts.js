@@ -34,5 +34,13 @@ function fadeInOut() {
 
 fadeInOut();
 
-
+const columns = document.querySelectorAll(".column");
+columns.forEach(column => {
+  column.addEventListener("click", () => {
+    columns.forEach(c => {
+      c.classList.remove("active");
+    });
+    column.classList.add("active");
+  });
+});
 

@@ -53,7 +53,17 @@ async function gitStuff() {
 
   dropdownBtn.addEventListener('click', () => {
     dropdown.classList.toggle('active');
+
   });
 }
 
 gitStuff();
+
+
+const button = document.querySelector('.dropdown-btn2');
+const dropdown = document.querySelector('.dropdown-content2');
+
+button.addEventListener('click', function () {
+  dropdown.classList.toggle('show');
+  document.body.classList.toggle('dropdown-open');
+});

@@ -1,27 +1,35 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10042645&assignment_repo_type=AssignmentRepo)
-# CTEC3905 ASSIGNMENT
+# Front-End Web Development Assignment - Personal Portfolio
 
-Welcome. This is your assignment repository.
+## Project Description
+For this assignment I chose to produce a personal portfolio website that I can use to highlight my work and possibly show to potential employers to demonstrate my abilities. My aim for the general aesthetic of the website was simplicity and accessibility. I want users to be able to navigate the site with ease and locate the things they would be looking for from me. This meant using a relatively simple but aesthetic nav-bar on each page with links to the relevant pages. I wanted the page to be clear and concise that it was my portfolio which is why I put emphasis on the logo on the index page and in the top right of the nav-bar.
 
-In this file, we will expect a brief description of your project in [markdown](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) format.
-Try to keep it to a maximum of about 300 words.
-Though shorter is no problem.
+## Screen-Size Adaptation
+In order to make my site friendly for mobile users, I ensured that I put consistent media screens in my code so that it can be resized accordingly without breaking the flow of the content and making it look messy. I put a few different breaks for this, E.G. at 1320px, 1100px and 750px.
 
-The description should include a summary of your site content and the primary audience you are targeting.
-Also include a brief description of how you have organised the content (a few sentences is fine) for the audience.
-Make some specific reference to how you have adapted your site for different screen sizes.
+## Further Explanation/Issues
+I have worked within graphic design areas previously so I wanted to showcase some work for that, however when I tried to implement a speedart youtube video of said work, the video didn't seem to embed properly and would not play directly from the portfolio. I believe this may have been due to copyrighting regulations on youtube that do not allow embedding or it could have been an issue with the video as other videos embedded just fine. It also resulted in some console errors in the browser.
 
-If there are any parts of your code or user interface that need further explanation, you can include that here.
-If anything is broken or doesn't quite work properly, you may explain what it SHOULD do.
+## References
 
-You **must** include references (including links) to any external resources/videos/code examples that you have used here.
+Social Media Icon Links:
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 
-## Things to do
+Font:
+https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap
 
-- Replace the content inside [index.html](index.html) with your own structured HTML.
-- Replace the [replaceme.css](replaceme.css) and [replaceme.js](js/replaceme.js) files with your own files.
-- Update the `<link>` and `<script>` elements to point to your new files.
-- Replace the contents of this file (readme.md) with your own short project description as detailed above.
+GitHub API:
+https://api.github.com/users/PaddyFRGithub
+https://docs.github.com/en/rest?apiVersion=2022-11-28
 
->We don't expect there to be much left of the original content in these files once you are done.
-It should be all your own code.
+HTML, CSS, JS Styling Help:
+https://www.w3schools.com/html/default.asp
+
+Favicon Resizing:
+https://www.favicon.cc/
+
+Nav-Bar Flexbox Tutorial:
+https://www.youtube.com/watch?v=PwWHL3RyQgk 
+
+
+
+

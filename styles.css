@@ -226,20 +226,11 @@ h2 {
 	text-align: center;
 }
 
-
-
-@media only screen and (max-width: 570px) {
-	iframe {
-		width: 373px;
-		height: 210px;
-	}
-}
-
-@media only screen and (max-width: 385px) {
-	iframe {
-		width: 280px;
-		height: 158px;
-	}
+.container2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
 }
 
 form {
@@ -457,10 +448,12 @@ h3#workh3 {
 
 .container {
 	display: flex;
+	padding-top: 20px;
+	margin: 10px;
 }
 
 .column {
-	flex: 1;
+	flex: 3;
 	padding: 20px;
 	overflow: hidden;
 	transition: flex 0.5s ease;
@@ -487,11 +480,24 @@ h3#workh3 {
 	margin: 0;
 	font-size: 1.5em;
 	transition: font-size 0.5s ease, margin 0.5s ease;
+	padding: 10px;
 }
 
 .column p {
 	display: none;
 	transition: display 0.5s ease;
+}
+
+@media only screen and (max-width: 750px) {
+	.column h2 {
+		font-size: 1em;
+	}
+	.column.active h2 {
+		font-size: 1em;
+	}
+	.column.active p {
+		font-size: 12px;
+	}
 }
 
 
@@ -553,3 +559,4 @@ h3#workh3 {
 	z-index: 0;
 	transition: margin-top 0.3s ease-in-out;
   }
+

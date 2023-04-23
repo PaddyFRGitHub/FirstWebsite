@@ -390,6 +390,38 @@ h3#workh3 {
 	font-size: 40px;
 }
 
+h3#workh32 {
+	text-align: center;
+	padding: 40px;
+	font-size: 40px;
+}
+
+h3#workh3:before,
+h3#workh3:after {
+	content: "";
+	display: block;
+	height: 1px;
+	background-color: black;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 80%;
+}
+
+h3#workh32:before,
+h3#workh32:after {
+	content: "";
+	display: block;
+	height: 1px;
+	background-color: black;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 50%;
+}
+
 .dropdown {
 	display: flex;
 	justify-content: center;
@@ -398,7 +430,6 @@ h3#workh3 {
 	padding-bottom: 10px;
 	margin-bottom: 100px;
 	position: relative;
-	margin-bottom: 20px;
 }
 
 .dropdown-btn {

@@ -1,19 +1,19 @@
-const form1 = document.querySelector('.contact');
+const myButton = document.getElementById("sendBtn");
 
-form1.addEventListener('submit', event => {
-  event.preventDefault();
+myButton.addEventListener("click", function() {
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
 
-  const formData = new FormData(form1);
-  const data = Object.fromEntries(formData);
-
-  fetch('https://reqres.in/api/users', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  }).then(res => res.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
-
+  if (nameInput.value && emailInput.value && messageInput.value) {
+    alert("Message sent. Thank you for your enquiry!");
+  } else {
+    alert("Please fill in all the fields before sending the message.");
+  }
 });
+
+
+
+
+
+

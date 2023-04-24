@@ -699,3 +699,10 @@ h3#workh32:after {
 	}
 }
 
+.aboutline2 {
+	width: 10%;
+	height: 1x;
+	background: #11101b;
+	margin-top: 100px;
+	margin: auto;
+}

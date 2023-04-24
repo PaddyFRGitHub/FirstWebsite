@@ -104,6 +104,10 @@ nav.nav-bar li {
 		width: 100px;
 	}
 
+	#space {
+		margin-top: 50px;
+	}
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -157,6 +161,10 @@ nav.nav-bar li {
 
 	.logo {
 		width: 80px;
+	}
+
+	#space {
+		margin: 100px;
 	}
 }
 
@@ -703,6 +711,7 @@ h3#workh32:after {
 	width: 10%;
 	height: 1x;
 	background: #11101b;
-	margin-top: 100px;
 	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }

@@ -7,7 +7,7 @@ For this assignment I chose to produce a personal portfolio website that I can u
 In order to make my site friendly for mobile users, I ensured that I put consistent media screens in my code so that it can be resized accordingly without breaking the flow of the content and making it look messy. I put a few different breaks for this, E.G. at 1320px, 1100px and 750px and all content can be viewed properly at 400px.
 
 ## Further Explanation/Issues
-I have worked within graphic design areas previously and wanted to showcase some work, however when I tried to implement a speedart youtube video of said work, the video didn't embed properly and would not play directly from the portfolio. I believe this may have been due to copyrighting regulations on youtube that do not allow embedding or it could have been an issue with the video as other videos embedded just fine. It also resulted in some console errors in the browser. Instead of this, I put an img with relevant work and on click it takes you to a new tab where you can view it at full size.
+I have worked within graphic design areas previously and wanted to showcase some work, however when I tried to implement a speedart youtube video of said work, the video didn't embed properly and would not play directly from the portfolio. This may have been due to copyrighting regulations on youtube that do not allow embedding or it could have been an issue with the video as other videos embedded just fine. It also resulted in some console errors in the browser. Instead of this, I put an img with relevant work and on click it takes you to a new tab where you can view it at full size.
 
 ## References
 

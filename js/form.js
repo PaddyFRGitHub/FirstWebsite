@@ -1,6 +1,6 @@
 const myButton = document.getElementById("sendBtn");
 
-myButton.addEventListener("click", function() {
+myButton.addEventListener("click", function () {
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const messageInput = document.getElementById("message");
